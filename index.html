@@ -8,6 +8,8 @@
 
     <title>Coffee.</title>
 
+    <link rel="stylesheet" href="style.css">
+
     <script src="script.js" defer></script>
 
 </head>
@@ -16,26 +18,89 @@
 <body>
 
 
-    <h1>Coffee.</h1>
-
-    <p>
-        Your family coffee shop
-    </p>
+<div class="app">
 
 
-    <input 
-        id="nameInput"
-        type="text"
-        placeholder="Your name"
-    >
+    <!-- Pantalla inicial -->
+
+    <section id="welcomeScreen">
+
+        <h1>Coffee.</h1>
+
+        <p>
+            Your family coffee shop
+        </p>
 
 
-    <button onclick="startApp()">
-        Start ☕
-    </button>
+        <input 
+            id="nameInput"
+            type="text"
+            placeholder="Your name"
+        >
+
+
+        <button onclick="startApp()">
+            Start ☕
+        </button>
+
+
+    </section>
+
+
+
+    <!-- Pantalla categorías -->
+
+    <section id="categoryScreen" style="display:none;">
+
+
+        <h2 id="helloUser">
+            Hello 👋
+        </h2>
+
+
+        <p>
+            What would you like?
+        </p>
+
+
+
+        <button class="category">
+            ☕<br>
+            Coffee
+        </button>
+
+
+        <button class="category">
+            🍵<br>
+            Tea
+        </button>
+
+
+        <button class="category">
+            🍔<br>
+            Food
+        </button>
+
+
+        <button class="category">
+            🍪<br>
+            Snack
+        </button>
+
+
+        <button class="category">
+            🥤<br>
+            Drink
+        </button>
+
+
+
+    </section>
+
+
+</div>
 
 
 </body>
-
 
 </html>
