@@ -3,80 +3,88 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Coffee.</title>
+<title>Coffee.</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <script src="script.js" defer></script>
+<script src="script.js" defer></script>
 
 </head>
 
 
 <body>
 
+
 <div class="app">
 
 
 <section id="welcomeScreen">
 
-    <h1>Coffee.</h1>
+<h1>Coffee.</h1>
 
-    <p>Your family coffee shop</p>
-
-
-    <input 
-        id="nameInput"
-        type="text"
-        placeholder="Your name"
-    >
+<p>Your family coffee shop</p>
 
 
-    <button onclick="startApp()">
-        Start ☕
-    </button>
+<input 
+id="nameInput"
+type="text"
+placeholder="Your name">
+
+
+<button onclick="startApp()">
+Start ☕
+</button>
+
 
 </section>
+
 
 
 
 
 <section id="categoryScreen" style="display:none;">
 
-    <h2 id="helloUser"></h2>
 
-    <p>What would you like?</p>
+<h2 id="helloUser"></h2>
 
-
-    <button class="category" onclick="openCategory('Coffee')">
-        ☕<br>Coffee
-    </button>
-
-    <button class="category" onclick="openCategory('Tea')">
-        🍵<br>Tea
-    </button>
-
-    <button class="category" onclick="openCategory('Food')">
-        🍔<br>Food
-    </button>
-
-    <button class="category" onclick="openCategory('Snack')">
-        🍪<br>Snack
-    </button>
-
-    <button class="category" onclick="openCategory('Drink')">
-        🥤<br>Drink
-    </button>
+<p>What would you like?</p>
 
 
-    <button onclick="showCart()">
-        🛒 View cart
-    </button>
+<button class="category" onclick="openCategory('Coffee')">
+☕<br>Coffee
+</button>
+
+
+<button class="category" onclick="openCategory('Tea')">
+🍵<br>Tea
+</button>
+
+
+<button class="category" onclick="openCategory('Food')">
+🍔<br>Food
+</button>
+
+
+<button class="category" onclick="openCategory('Snack')">
+🍪<br>Snack
+</button>
+
+
+<button class="category" onclick="openCategory('Drink')">
+🥤<br>Drink
+</button>
+
+
+<button onclick="showCart()">
+🛒 View cart
+</button>
 
 
 </section>
+
 
 
 
@@ -85,23 +93,24 @@
 <section id="productScreen" style="display:none;">
 
 
-    <h2 id="productTitle"></h2>
+<h2 id="productTitle"></h2>
 
 
-    <div id="productList"></div>
+<div id="productList"></div>
 
 
-    <button onclick="backToCategories()">
-        ← Back
-    </button>
+<button onclick="backToCategories()">
+← Back
+</button>
 
 
-    <button onclick="showCart()">
-        🛒 Cart
-    </button>
+<button onclick="showCart()">
+🛒 Cart
+</button>
 
 
 </section>
+
 
 
 
@@ -111,28 +120,60 @@
 <section id="cartScreen" style="display:none;">
 
 
-    <h2>
-        🛒 Your order
-    </h2>
+<h2>
+🛒 Your order
+</h2>
 
 
-    <div id="cartList"></div>
+<div id="cartList"></div>
 
 
-    <h3 id="totalItems"></h3>
+<h3 id="totalItems"></h3>
 
 
-    <button onclick="sendOrder()">
-        Send order 🚀
-    </button>
+<button onclick="sendOrder()">
+Send order 🚀
+</button>
 
 
-    <button onclick="backToCategories()">
-        Continue shopping
-    </button>
+<button onclick="backToCategories()">
+Continue shopping
+</button>
 
 
 </section>
+
+
+
+
+
+
+
+<section id="confirmationScreen" style="display:none;">
+
+
+<h1>
+✅ Order sent!
+</h1>
+
+
+<p>
+Thank you for choosing Coffee. ☕
+</p>
+
+
+<p>
+Your order is being prepared ☕
+</p>
+
+
+<button onclick="newOrder()">
+Start new order
+</button>
+
+
+</section>
+
 
 
 </div>
