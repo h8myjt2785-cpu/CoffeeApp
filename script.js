@@ -1,6 +1,8 @@
 function startApp() {
 
+
     let name = document.getElementById("nameInput").value;
+
 
     if (name === "") {
 
@@ -11,6 +13,14 @@ function startApp() {
     }
 
 
-    alert("Hello, " + name + " 👋");
+    document.getElementById("welcomeScreen").style.display = "none";
+
+
+    document.getElementById("categoryScreen").style.display = "block";
+
+
+    document.getElementById("helloUser").innerHTML =
+        "Hello, " + name + " 👋";
+
 
 }
