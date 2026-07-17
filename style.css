@@ -218,3 +218,25 @@ button:hover {
     font-size: 22px;
 
 }
+.smallButton {
+
+    background: red !important;
+
+    color: white !important;
+
+    width: 60px;
+
+    height: 60px;
+
+    font-size: 30px;
+
+}
+
+
+.removeButton {
+
+    background: black !important;
+
+    color: white !important;
+
+}
