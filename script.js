@@ -7,10 +7,10 @@ let cart = [];
 function startApp(){
 
 
-    userName=document.getElementById("nameInput").value;
+    userName = document.getElementById("nameInput").value;
 
 
-    if(userName===""){
+    if(userName === ""){
 
         alert("Write your name first ☕");
 
@@ -33,6 +33,7 @@ function startApp(){
 
 
 
+
 function openCategory(category){
 
 
@@ -41,50 +42,67 @@ function openCategory(category){
     document.getElementById("productScreen").style.display="block";
 
 
-    document.getElementById("productTitle").innerHTML=category;
+    document.getElementById("productTitle").innerHTML = category;
 
 
-    let products=[];
+
+    let products = [];
 
 
-    if(category==="Coffee")
-    products=[
-        "Americano",
-        "Cappuccino",
-        "Mocha",
-        "Leche con chocolate fría",
-        "Leche con chocolate caliente"
-    ];
+
+    if(category==="Coffee"){
+
+        products=[
+            "Americano",
+            "Cappuccino",
+            "Mocha",
+            "Leche con chocolate fría",
+            "Leche con chocolate caliente"
+        ];
+
+    }
 
 
-    if(category==="Tea")
-    products=[
-        "Chai",
-        "Manzanilla",
-        "Manzana con canela",
-        "Hierbabuena"
-    ];
+    if(category==="Tea"){
+
+        products=[
+            "Chai",
+            "Manzanilla",
+            "Manzana con canela",
+            "Hierbabuena"
+        ];
+
+    }
 
 
-    if(category==="Food")
-    products=[
-        "Sandwich",
-        "Quesadilla"
-    ];
+    if(category==="Food"){
+
+        products=[
+            "Sandwich",
+            "Quesadilla"
+        ];
+
+    }
 
 
-    if(category==="Snack")
-    products=[
-        "Nueces",
-        "Chispas de chocolate"
-    ];
+    if(category==="Snack"){
+
+        products=[
+            "Nueces",
+            "Chispas de chocolate"
+        ];
+
+    }
 
 
-    if(category==="Drink")
-    products=[
-        "Agua de limón",
-        "Agua simple"
-    ];
+    if(category==="Drink"){
+
+        products=[
+            "Agua de limón",
+            "Agua simple"
+        ];
+
+    }
 
 
 
@@ -99,14 +117,13 @@ function openCategory(category){
 
         list.innerHTML += `
 
-        <button class="product"
-        onclick="addToCart('${product}')">
+        <button class="product" onclick="addToCart('${product}')">
 
         ${product}
 
         <br><br>
 
-        ➕ Add to cart
+        ➕ Add to cart 🛒
 
         </button>
 
@@ -125,7 +142,11 @@ function openCategory(category){
 function addToCart(product){
 
 
-    let item=cart.find(x=>x.name===product);
+    let item = cart.find(function(x){
+
+        return x.name === product;
+
+    });
 
 
 
@@ -133,19 +154,23 @@ function addToCart(product){
 
         item.quantity++;
 
-    }else{
+    } else {
+
 
         cart.push({
 
-            name:product,
-            quantity:1
+            name: product,
+
+            quantity: 1
 
         });
+
 
     }
 
 
-    alert(product+" added 🛒");
+
+    alert(product + " added 🛒");
 
 
 }
@@ -167,7 +192,9 @@ function showCart(){
 
     let list=document.getElementById("cartList");
 
+
     list.innerHTML="";
+
 
 
     let total=0;
@@ -181,26 +208,24 @@ function showCart(){
 
         <div class="cartItem">
 
-        ${item.name}
 
-        <br>
+        <h3>${item.name}</h3>
 
-        <button class="smallButton"
-        onclick="changeQuantity(${index},-1)">
-        -
+
+        <button class="smallButton" onclick="changeQuantity(${index},-1)">
+        ➖
         </button>
 
 
         ${item.quantity}
 
 
-        <button class="smallButton"
-        onclick="changeQuantity(${index},1)">
-        +
+        <button class="smallButton" onclick="changeQuantity(${index},1)">
+        ➕
         </button>
 
 
-        <br>
+        <br><br>
 
 
         <button onclick="removeItem(${index})">
@@ -210,7 +235,9 @@ function showCart(){
 
         </div>
 
+
         `;
+
 
 
         total += item.quantity;
@@ -221,10 +248,12 @@ function showCart(){
 
 
     document.getElementById("totalItems").innerHTML =
-    "Total items: "+total;
+    "Total items: " + total;
+
 
 
 }
+
 
 
 
@@ -235,11 +264,13 @@ function changeQuantity(index,amount){
     cart[index].quantity += amount;
 
 
-    if(cart[index].quantity<=0){
+
+    if(cart[index].quantity <= 0){
 
         cart.splice(index,1);
 
     }
+
 
 
     showCart();
@@ -250,10 +281,11 @@ function changeQuantity(index,amount){
 
 
 
+
 function removeItem(index){
 
 
-    cart.splice(index,1);
+    cart.splice(index, 1);
 
 
     showCart();
@@ -268,7 +300,7 @@ function removeItem(index){
 function sendOrder(){
 
 
-    if(cart.length===0){
+    if(cart.length === 0){
 
         alert("Your cart is empty ☕");
 
@@ -277,10 +309,12 @@ function sendOrder(){
     }
 
 
+
     alert("Order sent 🚀");
 
 
 }
+
 
 
 
@@ -294,5 +328,6 @@ function backToCategories(){
 
 
     document.getElementById("categoryScreen").style.display="block";
+
 
 }
