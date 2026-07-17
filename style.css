@@ -1,54 +1,91 @@
 body {
+
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f5eee6;
     text-align: center;
+
 }
 
 
 .app {
+
     padding: 30px;
+
 }
 
 
 h1 {
+
     font-size: 50px;
+    margin-bottom: 10px;
+
+}
+
+
+h2 {
+
+    font-size: 35px;
+
 }
 
 
 p {
+
     font-size: 20px;
+
 }
 
 
 input {
+
     width: 80%;
     padding: 15px;
     font-size: 18px;
+
     border-radius: 15px;
     border: 1px solid #ccc;
+
     margin: 20px;
+
 }
+
 
 
 button {
+
     width: 85%;
+
     padding: 20px;
+
     font-size: 22px;
+
     border-radius: 20px;
+
     border: none;
+
     margin: 12px;
+
     cursor: pointer;
+
 }
+
 
 
 button:hover {
+
     transform: scale(1.02);
+
 }
 
 
+
 .category {
+
     height: 120px;
+
     font-size: 30px;
+
     background: white;
+
 }
