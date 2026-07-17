@@ -404,3 +404,22 @@ function backToCategories(){
 
 
 }
+if(category==="Food"){
+
+    products=[
+
+        "Sandwich",
+
+        "Mollete",
+
+        "Sincronizada",
+
+        "Huevo con jamón",
+
+        "Huevo con chorizo"
+
+        "quesadilla"
+
+    ];
+
+}
