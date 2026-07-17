@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 
@@ -25,7 +25,7 @@
 
 <h1>Coffee.</h1>
 
-<p>Your family coffee shop</p>
+<p>Your family coffee shop ☕</p>
 
 
 <input 
@@ -51,6 +51,7 @@ Start ☕
 <h2 id="helloUser"></h2>
 
 <p>What would you like?</p>
+
 
 
 <button class="category" onclick="openCategory('Coffee')">
@@ -90,6 +91,7 @@ Start ☕
 
 
 
+
 <section id="productScreen" style="display:none;">
 
 
@@ -97,6 +99,7 @@ Start ☕
 
 
 <div id="productList"></div>
+
 
 
 <button onclick="backToCategories()">
@@ -110,6 +113,7 @@ Start ☕
 
 
 </section>
+
 
 
 
@@ -131,9 +135,24 @@ Start ☕
 <h3 id="totalItems"></h3>
 
 
+
+<h3>
+📝 Notes
+</h3>
+
+
+<textarea 
+id="orderNote"
+placeholder="Any special request?">
+</textarea>
+
+
+
+
 <button onclick="sendOrder()">
 Send order 🚀
 </button>
+
 
 
 <button onclick="backToCategories()">
@@ -141,7 +160,9 @@ Continue shopping
 </button>
 
 
+
 </section>
+
 
 
 
@@ -163,7 +184,7 @@ Thank you for choosing Coffee. ☕
 
 
 <p>
-Your order is being prepared ☕
+Your order is being prepared.
 </p>
 
 
@@ -176,9 +197,11 @@ Start new order
 
 
 
+
 </div>
 
 
 </body>
+
 
 </html>
