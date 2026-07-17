@@ -17,11 +17,8 @@
 
 <body>
 
-
 <div class="app">
 
-
-<!-- Inicio -->
 
 <section id="welcomeScreen">
 
@@ -46,8 +43,6 @@
 
 
 
-<!-- Categorías -->
-
 <section id="categoryScreen" style="display:none;">
 
     <h2 id="helloUser"></h2>
@@ -59,21 +54,17 @@
         ☕<br>Coffee
     </button>
 
-
     <button class="category" onclick="openCategory('Tea')">
         🍵<br>Tea
     </button>
-
 
     <button class="category" onclick="openCategory('Food')">
         🍔<br>Food
     </button>
 
-
     <button class="category" onclick="openCategory('Snack')">
         🍪<br>Snack
     </button>
-
 
     <button class="category" onclick="openCategory('Drink')">
         🥤<br>Drink
@@ -90,8 +81,6 @@
 
 
 
-
-<!-- Productos -->
 
 <section id="productScreen" style="display:none;">
 
@@ -118,7 +107,6 @@
 
 
 
-<!-- Carrito -->
 
 <section id="cartScreen" style="display:none;">
 
@@ -132,6 +120,11 @@
 
 
     <h3 id="totalItems"></h3>
+
+
+    <button onclick="sendOrder()">
+        Send order 🚀
+    </button>
 
 
     <button onclick="backToCategories()">
