@@ -281,11 +281,10 @@ function changeQuantity(index,amount){
 
 
 
-
 function removeItem(index){
 
 
-    cart.splice(index, 1);
+    cart.splice(index,1);
 
 
     showCart();
@@ -309,8 +308,10 @@ function sendOrder(){
     }
 
 
+    alert("Order sent ✅");
 
-    alert("Order sent 🚀");
+
+    cart = [];
 
 
 }
