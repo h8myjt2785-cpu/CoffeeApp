@@ -1,60 +1,54 @@
 body {
 
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f3e5d3;
-    text-align: center;
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f3e5d3;
+    text-align:center;
 
 }
-
 
 
 .app {
 
-    padding: 25px;
+    padding:25px;
 
 }
-
 
 
 h1 {
 
-    font-size: 55px;
-    color: #4b2e1e;
+    font-size:55px;
+    color:#4b2e1e;
 
 }
-
 
 
 h2 {
 
-    font-size: 35px;
-    color: #4b2e1e;
+    font-size:35px;
+    color:#4b2e1e;
 
 }
-
 
 
 p {
 
-    font-size: 20px;
-    color: #5c4033;
+    font-size:20px;
 
 }
 
 
-
 input {
 
-    width: 80%;
-    padding: 16px;
+    width:80%;
+    padding:16px;
 
-    border-radius: 20px;
-    border: none;
+    border-radius:20px;
+    border:none;
 
-    font-size: 18px;
+    font-size:18px;
 
-    margin: 20px;
+    margin:20px;
 
 }
 
@@ -62,18 +56,19 @@ input {
 
 button {
 
-    width: 85%;
-    padding: 20px;
+    width:85%;
+    padding:20px;
 
-    border-radius: 25px;
-    border: none;
+    margin:12px;
 
-    margin: 12px;
+    border:none;
 
-    font-size: 22px;
+    border-radius:25px;
 
-    background: #6f4e37;
-    color: white;
+    font-size:22px;
+
+    background:#6f4e37;
+    color:white;
 
 }
 
@@ -81,11 +76,11 @@ button {
 
 .category {
 
-    height: 120px;
+    height:120px;
 
-    background: white;
+    background:white;
 
-    color: #4b2e1e;
+    color:#4b2e1e;
 
 }
 
@@ -93,30 +88,28 @@ button {
 
 .product {
 
-    background: white;
+    background:white;
 
-    color: #4b2e1e;
+    color:#4b2e1e;
 
-    height: auto;
+    text-align:left;
 
-    padding: 25px;
-
-}
-
-
-
-.product button {
-
-    background: #6f4e37;
-
-    color: white;
+    padding:25px;
 
 }
 
 
 
-#cartList {
+.cartItem {
 
-    font-size: 22px;
+    background:white;
+
+    padding:20px;
+
+    margin:15px;
+
+    border-radius:20px;
+
+    font-size:22px;
 
 }
