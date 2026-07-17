@@ -8,6 +8,7 @@ body {
 }
 
 
+
 .app {
 
     padding: 25px;
@@ -15,13 +16,14 @@ body {
 }
 
 
+
 h1 {
 
     font-size: 55px;
     color: #4b2e1e;
-    margin-top: 40px;
 
 }
+
 
 
 h2 {
@@ -30,6 +32,7 @@ h2 {
     color: #4b2e1e;
 
 }
+
 
 
 p {
@@ -51,7 +54,7 @@ input {
 
     font-size: 18px;
 
-    margin: 25px 0;
+    margin: 20px;
 
 }
 
@@ -60,14 +63,14 @@ input {
 button {
 
     width: 85%;
-    padding: 22px;
+    padding: 20px;
 
     border-radius: 25px;
     border: none;
 
-    font-size: 25px;
-
     margin: 12px;
+
+    font-size: 22px;
 
     background: #6f4e37;
     color: white;
@@ -76,22 +79,44 @@ button {
 
 
 
-button:hover {
-
-    transform: scale(1.03);
-
-}
-
-
-
 .category {
 
-    height: 130px;
+    height: 120px;
 
     background: white;
 
     color: #4b2e1e;
 
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+}
+
+
+
+.product {
+
+    background: white;
+
+    color: #4b2e1e;
+
+    height: auto;
+
+    padding: 25px;
+
+}
+
+
+
+.product button {
+
+    background: #6f4e37;
+
+    color: white;
+
+}
+
+
+
+#cartList {
+
+    font-size: 22px;
 
 }
