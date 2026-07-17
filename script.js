@@ -6,9 +6,7 @@ let cart = [];
 
 function startApp(){
 
-
     userName = document.getElementById("nameInput").value;
-
 
     if(userName === ""){
 
@@ -18,7 +16,6 @@ function startApp(){
 
     }
 
-
     document.getElementById("welcomeScreen").style.display="none";
 
     document.getElementById("categoryScreen").style.display="block";
@@ -26,7 +23,6 @@ function startApp(){
 
     document.getElementById("helloUser").innerHTML =
     "Hello, " + userName + " 👋";
-
 
 }
 
@@ -53,62 +49,103 @@ function openCategory(category){
     if(category==="Coffee"){
 
         products=[
+
             "Americano",
+
             "Cappuccino",
+
             "Mocha",
+
+            "Latte",
+
             "Leche con chocolate fría",
+
             "Leche con chocolate caliente"
+
         ];
 
     }
+
 
 
     if(category==="Tea"){
 
         products=[
-            "Chai",
+
             "Manzanilla",
+
             "Manzana con canela",
-            "Hierbabuena"
+
+            "Hierbabuena",
+
+            "Té de jengibre con limón"
+
         ];
 
     }
+
+
 
 
     if(category==="Food"){
 
         products=[
-            "Sandwich",
-            "Quesadilla"
+
+            "Mollete",
+
+            "Sincronizada",
+
+            "Huevo con jamón",
+
+            "Huevo con chorizo"
+
         ];
 
     }
+
+
+
 
 
     if(category==="Snack"){
 
         products=[
-            "Nueces",
-            "Chispas de chocolate"
+
+            "Galletas Marías",
+
+            "Ritz",
+
+            "Rice cakes",
+
+            "Pan con Nutella"
+
         ];
 
     }
+
+
+
 
 
     if(category==="Drink"){
 
         products=[
+
             "Agua de limón",
+
             "Agua simple"
+
         ];
 
     }
 
 
 
-    let list = document.getElementById("productList");
 
-    list.innerHTML = "";
+
+    let list=document.getElementById("productList");
+
+    list.innerHTML="";
 
 
 
@@ -139,6 +176,8 @@ function openCategory(category){
 
 
 
+
+
 function addToCart(product){
 
 
@@ -154,8 +193,9 @@ function addToCart(product){
 
         item.quantity++;
 
-    } else {
+    }
 
+    else{
 
         cart.push({
 
@@ -165,7 +205,6 @@ function addToCart(product){
 
         });
 
-
     }
 
 
@@ -174,6 +213,8 @@ function addToCart(product){
 
 
 }
+
+
 
 
 
@@ -190,14 +231,14 @@ function showCart(){
 
 
 
-    let list = document.getElementById("cartList");
+    let list=document.getElementById("cartList");
 
 
-    list.innerHTML = "";
+    list.innerHTML="";
 
 
 
-    let total = 0;
+    let total=0;
 
 
 
@@ -229,12 +270,13 @@ function showCart(){
 
 
         <button onclick="removeItem(${index})">
+
         Remove ❌
+
         </button>
 
 
         </div>
-
 
         `;
 
@@ -251,21 +293,22 @@ function showCart(){
     "Total items: " + total;
 
 
-
 }
 
 
 
 
 
-function changeQuantity(index, amount){
+
+
+function changeQuantity(index,amount){
 
 
     cart[index].quantity += amount;
 
 
 
-    if(cart[index].quantity <= 0){
+    if(cart[index].quantity <=0){
 
         cart.splice(index,1);
 
@@ -277,6 +320,8 @@ function changeQuantity(index, amount){
 
 
 }
+
+
 
 
 
@@ -297,10 +342,12 @@ function removeItem(index){
 
 
 
+
+
 function sendOrder(){
 
 
-    if(cart.length === 0){
+    if(cart.length===0){
 
         alert("Your cart is empty ☕");
 
@@ -309,15 +356,18 @@ function sendOrder(){
     }
 
 
+
     document.getElementById("cartScreen").style.display="none";
 
     document.getElementById("confirmationScreen").style.display="block";
 
 
-    cart = [];
+    cart=[];
 
 
 }
+
+
 
 
 
@@ -328,7 +378,6 @@ function newOrder(){
 
     document.getElementById("confirmationScreen").style.display="none";
 
-
     document.getElementById("welcomeScreen").style.display="block";
 
 
@@ -336,6 +385,8 @@ function newOrder(){
 
 
 }
+
+
 
 
 
