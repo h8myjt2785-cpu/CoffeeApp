@@ -2,11 +2,15 @@ let userName = "";
 
 let cart = [];
 
+let orderNote = "";
+
 
 
 function startApp(){
 
+
     userName = document.getElementById("nameInput").value;
+
 
     if(userName === ""){
 
@@ -16,6 +20,7 @@ function startApp(){
 
     }
 
+
     document.getElementById("welcomeScreen").style.display="none";
 
     document.getElementById("categoryScreen").style.display="block";
@@ -24,7 +29,9 @@ function startApp(){
     document.getElementById("helloUser").innerHTML =
     "Hello, " + userName + " 👋";
 
+
 }
+
 
 
 
@@ -91,6 +98,8 @@ function openCategory(category){
 
         products=[
 
+            "Sandwich",
+
             "Mollete",
 
             "Sincronizada",
@@ -102,7 +111,6 @@ function openCategory(category){
         ];
 
     }
-
 
 
 
@@ -126,7 +134,6 @@ function openCategory(category){
 
 
 
-
     if(category==="Drink"){
 
         products=[
@@ -138,7 +145,6 @@ function openCategory(category){
         ];
 
     }
-
 
 
 
@@ -160,7 +166,7 @@ function openCategory(category){
 
         <br><br>
 
-        ➕ Add to cart 🛒
+        Add to cart 🛒
 
         </button>
 
@@ -208,10 +214,6 @@ function addToCart(product){
     }
 
 
-
-    alert(product + " added 🛒");
-
-
 }
 
 
@@ -253,26 +255,27 @@ function showCart(){
         <h3>${item.name}</h3>
 
 
-        <button class="smallButton" onclick="changeQuantity(${index},-1)">
-        ➖
+        <button class="quantityButton minus" onclick="changeQuantity(${index},-1)">
+        −
         </button>
 
 
+        <span class="quantityNumber">
         ${item.quantity}
+        </span>
 
 
-        <button class="smallButton" onclick="changeQuantity(${index},1)">
-        ➕
+        <button class="quantityButton plus" onclick="changeQuantity(${index},1)">
+        +
         </button>
 
 
-        <br><br>
+
+        <br>
 
 
-        <button onclick="removeItem(${index})">
-
+        <button class="removeButton" onclick="removeItem(${index})">
         Remove ❌
-
         </button>
 
 
@@ -308,7 +311,7 @@ function changeQuantity(index,amount){
 
 
 
-    if(cart[index].quantity <=0){
+    if(cart[index].quantity <= 0){
 
         cart.splice(index,1);
 
@@ -357,12 +360,22 @@ function sendOrder(){
 
 
 
-    document.getElementById("cartScreen").style.display="none";
+    orderNote = document.getElementById("orderNote").value;
 
-    document.getElementById("confirmationScreen").style.display="block";
+
+
+    console.log("Order:", cart);
+
+    console.log("Note:", orderNote);
+
 
 
     cart=[];
+
+
+    document.getElementById("cartScreen").style.display="none";
+
+    document.getElementById("confirmationScreen").style.display="block";
 
 
 }
@@ -378,10 +391,14 @@ function newOrder(){
 
     document.getElementById("confirmationScreen").style.display="none";
 
+
     document.getElementById("welcomeScreen").style.display="block";
 
 
     document.getElementById("nameInput").value="";
+
+
+    document.getElementById("orderNote").value="";
 
 
 }
@@ -402,24 +419,5 @@ function backToCategories(){
 
     document.getElementById("categoryScreen").style.display="block";
 
-
-}
-if(category==="Food"){
-
-    products=[
-
-        "Sandwich",
-
-        "Mollete",
-
-        "Sincronizada",
-
-        "Huevo con jamón",
-
-        "Huevo con chorizo"
-
-        "quesadilla"
-
-    ];
 
 }
