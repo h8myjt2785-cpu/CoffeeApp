@@ -15,14 +15,12 @@ body {
 }
 
 
-
 h1 {
 
     font-size: 55px;
     color: #4b2e1e;
 
 }
-
 
 
 h2 {
@@ -33,7 +31,6 @@ h2 {
 }
 
 
-
 p {
 
     font-size: 20px;
@@ -42,13 +39,13 @@ p {
 }
 
 
-
 input {
 
     width: 80%;
     padding: 16px;
 
     border-radius: 20px;
+
     border: none;
 
     font-size: 18px;
@@ -62,6 +59,7 @@ input {
 button {
 
     width: 85%;
+
     padding: 20px;
 
     margin: 12px;
@@ -73,9 +71,8 @@ button {
     font-size: 22px;
 
     background: #6f4e37;
-    color: white;
 
-    cursor: pointer;
+    color: white;
 
 }
 
@@ -107,8 +104,6 @@ button:hover {
 
     color: #4b2e1e;
 
-    text-align: center;
-
 }
 
 
@@ -131,37 +126,65 @@ button:hover {
 
 
 
-/* Botones + y - */
+/* BOTONES DE CANTIDAD */
 
-.smallButton {
+.quantityButton {
 
     width: 55px;
 
     height: 55px;
 
-    padding: 5px;
+    padding: 0;
 
     margin: 8px;
 
     border-radius: 50%;
 
+    font-size: 30px;
+
+    font-weight: bold;
+
+}
+
+
+
+.minus {
+
+    background: #d9b08c;
+
+    color: #4b2e1e;
+
+}
+
+
+
+.plus {
+
     background: #4b2e1e;
 
     color: white;
 
-    font-size: 25px;
+}
+
+
+
+.quantityNumber {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #4b2e1e;
 
 }
 
 
 
-/* Botón eliminar */
+/* BOTON ELIMINAR */
 
 .removeButton {
 
-    width: 70%;
-
-    background: #8b0000;
+    background: #9b2226;
 
     color: white;
 
@@ -169,24 +192,29 @@ button:hover {
 
 
 
-/* Total */
+/* TOTAL */
 
 #totalItems {
 
-    color: #4b2e1e;
-
     font-size: 25px;
 
+    color: #4b2e1e;
+
 }
+
+
+
+/* CONFIRMACION */
+
 #confirmationScreen h1 {
 
-    color:#4b2e1e;
+    color: #4b2e1e;
 
 }
 
 
 #confirmationScreen p {
 
-    font-size:22px;
+    font-size: 22px;
 
 }
