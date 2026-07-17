@@ -15,12 +15,14 @@ body {
 }
 
 
+
 h1 {
 
     font-size: 55px;
     color: #4b2e1e;
 
 }
+
 
 
 h2 {
@@ -31,6 +33,15 @@ h2 {
 }
 
 
+
+h3 {
+
+    color: #4b2e1e;
+
+}
+
+
+
 p {
 
     font-size: 20px;
@@ -39,9 +50,12 @@ p {
 }
 
 
+
+
 input {
 
     width: 80%;
+
     padding: 16px;
 
     border-radius: 20px;
@@ -53,6 +67,34 @@ input {
     margin: 20px;
 
 }
+
+
+
+
+
+textarea {
+
+    width: 80%;
+
+    height: 110px;
+
+    border-radius: 20px;
+
+    border: none;
+
+    padding: 15px;
+
+    font-size: 18px;
+
+    margin: 15px;
+
+    resize: none;
+
+}
+
+
+
+
 
 
 
@@ -78,11 +120,15 @@ button {
 
 
 
+
+
 button:hover {
 
     transform: scale(1.03);
 
 }
+
+
 
 
 
@@ -98,6 +144,8 @@ button:hover {
 
 
 
+
+
 .product {
 
     background: white;
@@ -105,6 +153,9 @@ button:hover {
     color: #4b2e1e;
 
 }
+
+
+
 
 
 
@@ -120,13 +171,11 @@ button:hover {
 
     font-size: 22px;
 
-    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
-
 }
 
 
 
-/* BOTONES DE CANTIDAD */
+
 
 .quantityButton {
 
@@ -136,15 +185,15 @@ button:hover {
 
     padding: 0;
 
-    margin: 8px;
-
     border-radius: 50%;
 
     font-size: 30px;
 
-    font-weight: bold;
+    margin: 8px;
 
 }
+
+
 
 
 
@@ -158,6 +207,8 @@ button:hover {
 
 
 
+
+
 .plus {
 
     background: #4b2e1e;
@@ -165,6 +216,8 @@ button:hover {
     color: white;
 
 }
+
+
 
 
 
@@ -180,7 +233,7 @@ button:hover {
 
 
 
-/* BOTON ELIMINAR */
+
 
 .removeButton {
 
@@ -192,51 +245,20 @@ button:hover {
 
 
 
-/* TOTAL */
+
 
 #totalItems {
 
     font-size: 25px;
 
-    color: #4b2e1e;
-
 }
 
 
 
-/* CONFIRMACION */
+
 
 #confirmationScreen h1 {
 
     color: #4b2e1e;
-
-}
-
-
-#confirmationScreen p {
-
-    font-size: 22px;
-
-}
-.smallButton {
-
-    background: red !important;
-
-    color: white !important;
-
-    width: 60px;
-
-    height: 60px;
-
-    font-size: 30px;
-
-}
-
-
-.removeButton {
-
-    background: black !important;
-
-    color: white !important;
 
 }
