@@ -21,7 +21,7 @@
 <div class="app">
 
 
-    <!-- Pantalla inicial -->
+    <!-- Inicio -->
 
     <section id="welcomeScreen">
 
@@ -49,10 +49,9 @@
 
 
 
-    <!-- Pantalla categorías -->
+    <!-- Categorías -->
 
     <section id="categoryScreen" style="display:none;">
-
 
         <h2 id="helloUser">
             Hello 👋
@@ -64,34 +63,81 @@
         </p>
 
 
-
-        <button class="category">
+        <button class="category" onclick="openCategory('Coffee')">
             ☕<br>
             Coffee
         </button>
 
 
-        <button class="category">
+        <button class="category" onclick="openCategory('Tea')">
             🍵<br>
             Tea
         </button>
 
 
-        <button class="category">
+        <button class="category" onclick="openCategory('Food')">
             🍔<br>
             Food
         </button>
 
 
-        <button class="category">
+        <button class="category" onclick="openCategory('Snack')">
             🍪<br>
             Snack
         </button>
 
 
-        <button class="category">
+        <button class="category" onclick="openCategory('Drink')">
             🥤<br>
             Drink
+        </button>
+
+
+    </section>
+
+
+
+
+    <!-- Productos -->
+
+    <section id="productScreen" style="display:none;">
+
+        <h2 id="productTitle">
+            Products
+        </h2>
+
+
+        <div id="productList">
+
+        </div>
+
+
+        <button onclick="backToCategories()">
+            ← Back
+        </button>
+
+
+    </section>
+
+
+
+
+    <!-- Carrito -->
+
+    <section id="cartScreen" style="display:none;">
+
+        <h2>
+            🛒 Your order
+        </h2>
+
+
+        <div id="cartList">
+
+        </div>
+
+
+        <button onclick="backToCategories()">
+            Continue shopping
         </button>
 
 
