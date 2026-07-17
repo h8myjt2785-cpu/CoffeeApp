@@ -106,9 +106,9 @@ function openCategory(category){
 
 
 
-    let list=document.getElementById("productList");
+    let list = document.getElementById("productList");
 
-    list.innerHTML="";
+    list.innerHTML = "";
 
 
 
@@ -190,14 +190,14 @@ function showCart(){
 
 
 
-    let list=document.getElementById("cartList");
+    let list = document.getElementById("cartList");
 
 
-    list.innerHTML="";
+    list.innerHTML = "";
 
 
 
-    let total=0;
+    let total = 0;
 
 
 
@@ -258,7 +258,7 @@ function showCart(){
 
 
 
-function changeQuantity(index,amount){
+function changeQuantity(index, amount){
 
 
     cart[index].quantity += amount;
@@ -277,6 +277,7 @@ function changeQuantity(index,amount){
 
 
 }
+
 
 
 
@@ -308,10 +309,30 @@ function sendOrder(){
     }
 
 
-    alert("Order sent ✅");
+    document.getElementById("cartScreen").style.display="none";
+
+    document.getElementById("confirmationScreen").style.display="block";
 
 
     cart = [];
+
+
+}
+
+
+
+
+
+function newOrder(){
+
+
+    document.getElementById("confirmationScreen").style.display="none";
+
+
+    document.getElementById("welcomeScreen").style.display="block";
+
+
+    document.getElementById("nameInput").value="";
 
 
 }
