@@ -38,6 +38,7 @@ p {
 }
 
 
+
 input {
 
     width:80%;
@@ -92,10 +93,6 @@ button {
 
     color:#4b2e1e;
 
-    text-align:left;
-
-    padding:25px;
-
 }
 
 
@@ -111,5 +108,17 @@ button {
     border-radius:20px;
 
     font-size:22px;
+
+}
+
+
+
+.smallButton {
+
+    width:20%;
+
+    padding:10px;
+
+    margin:5px;
 
 }
