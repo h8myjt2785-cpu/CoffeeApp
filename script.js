@@ -4,13 +4,13 @@ let cart = [];
 
 
 
-function startApp() {
+function startApp(){
 
 
     userName = document.getElementById("nameInput").value;
 
 
-    if(userName === "") {
+    if(userName === ""){
 
         alert("Write your name first ☕");
 
@@ -19,13 +19,13 @@ function startApp() {
     }
 
 
-    document.getElementById("welcomeScreen").style.display = "none";
+    document.getElementById("welcomeScreen").style.display="none";
 
-    document.getElementById("categoryScreen").style.display = "block";
+    document.getElementById("categoryScreen").style.display="block";
 
 
     document.getElementById("helloUser").innerHTML =
-        "Hello, " + userName + " 👋";
+    "Hello, " + userName + " 👋";
 
 
 }
@@ -33,25 +33,27 @@ function startApp() {
 
 
 
-function openCategory(category) {
+
+function openCategory(category){
 
 
-    document.getElementById("categoryScreen").style.display = "none";
+    document.getElementById("categoryScreen").style.display="none";
 
-    document.getElementById("productScreen").style.display = "block";
+    document.getElementById("productScreen").style.display="block";
 
 
     document.getElementById("productTitle").innerHTML =
-        category;
+    category;
 
 
 
-    let products = [];
+    let products=[];
 
 
-    if(category === "Coffee") {
 
-        products = [
+    if(category==="Coffee"){
+
+        products=[
             "Americano",
             "Cappuccino",
             "Mocha",
@@ -62,9 +64,9 @@ function openCategory(category) {
     }
 
 
-    if(category === "Tea") {
+    if(category==="Tea"){
 
-        products = [
+        products=[
             "Chai",
             "Manzanilla",
             "Manzana con canela",
@@ -74,9 +76,9 @@ function openCategory(category) {
     }
 
 
-    if(category === "Food") {
+    if(category==="Food"){
 
-        products = [
+        products=[
             "Sandwich",
             "Quesadilla"
         ];
@@ -84,9 +86,9 @@ function openCategory(category) {
     }
 
 
-    if(category === "Snack") {
+    if(category==="Snack"){
 
-        products = [
+        products=[
             "Nueces",
             "Chispas de chocolate"
         ];
@@ -94,9 +96,9 @@ function openCategory(category) {
     }
 
 
-    if(category === "Drink") {
+    if(category==="Drink"){
 
-        products = [
+        products=[
             "Agua de limón",
             "Agua simple"
         ];
@@ -105,50 +107,131 @@ function openCategory(category) {
 
 
 
-    let list = document.getElementById("productList");
+    let list=document.getElementById("productList");
+
+    list.innerHTML="";
 
 
-    list.innerHTML = "";
+
+    products.forEach(function(product){
 
 
+        list.innerHTML += `
 
-    products.forEach(function(item){
+        <button class="product"
+        onclick="addToCart('${product}')">
 
+        ${product}
 
-        list.innerHTML +=
+        <br><br>
 
-        `
-        <div>
+        ➕ Add to cart 🛒
 
-            <button class="product">
+        </button>
 
-                ${item}
-
-                <br><br>
-
-                <small>
-                Add to cart 🛒
-                </small>
-
-            </button>
-
-        </div>
         `;
 
 
     });
 
 
+
 }
+
+
+
+
+function addToCart(product){
+
+
+    let found = cart.find(item => item.name === product);
+
+
+
+    if(found){
+
+        found.quantity++;
+
+    } else {
+
+        cart.push({
+
+            name:product,
+            quantity:1
+
+        });
+
+    }
+
+
+    alert(product + " added 🛒");
+
+
+}
+
+
+
+
+
+function showCart(){
+
+
+    document.getElementById("categoryScreen").style.display="none";
+
+    document.getElementById("productScreen").style.display="none";
+
+    document.getElementById("cartScreen").style.display="block";
+
+
+
+    let list=document.getElementById("cartList");
+
+    list.innerHTML="";
+
+
+    let total=0;
+
+
+
+    cart.forEach(function(item){
+
+
+        list.innerHTML += `
+
+        <div class="cartItem">
+
+        ${item.name} x${item.quantity}
+
+        </div>
+
+        `;
+
+
+        total += item.quantity;
+
+
+    });
+
+
+
+    document.getElementById("totalItems").innerHTML =
+    "Total items: " + total;
+
+
+}
+
 
 
 
 function backToCategories(){
 
 
-    document.getElementById("productScreen").style.display = "none";
+    document.getElementById("productScreen").style.display="none";
 
-    document.getElementById("categoryScreen").style.display = "block";
+    document.getElementById("cartScreen").style.display="none";
+
+
+    document.getElementById("categoryScreen").style.display="block";
 
 
 }
