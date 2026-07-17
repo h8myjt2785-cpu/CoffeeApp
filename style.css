@@ -122,3 +122,21 @@ button {
     margin:5px;
 
 }
+.smallButton {
+
+    width: 55px;
+    height: 55px;
+
+    padding: 5px;
+
+    margin: 5px;
+
+    border-radius: 50%;
+
+    background: #4b2e1e;
+
+    color: white;
+
+    font-size: 25px;
+
+}
