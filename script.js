@@ -7,10 +7,10 @@ let cart = [];
 function startApp(){
 
 
-    userName = document.getElementById("nameInput").value;
+    userName=document.getElementById("nameInput").value;
 
 
-    if(userName === ""){
+    if(userName===""){
 
         alert("Write your name first ☕");
 
@@ -33,7 +33,6 @@ function startApp(){
 
 
 
-
 function openCategory(category){
 
 
@@ -42,68 +41,50 @@ function openCategory(category){
     document.getElementById("productScreen").style.display="block";
 
 
-    document.getElementById("productTitle").innerHTML =
-    category;
-
+    document.getElementById("productTitle").innerHTML=category;
 
 
     let products=[];
 
 
-
-    if(category==="Coffee"){
-
-        products=[
-            "Americano",
-            "Cappuccino",
-            "Mocha",
-            "Leche con chocolate fría",
-            "Leche con chocolate caliente"
-        ];
-
-    }
+    if(category==="Coffee")
+    products=[
+        "Americano",
+        "Cappuccino",
+        "Mocha",
+        "Leche con chocolate fría",
+        "Leche con chocolate caliente"
+    ];
 
 
-    if(category==="Tea"){
-
-        products=[
-            "Chai",
-            "Manzanilla",
-            "Manzana con canela",
-            "Hierbabuena"
-        ];
-
-    }
+    if(category==="Tea")
+    products=[
+        "Chai",
+        "Manzanilla",
+        "Manzana con canela",
+        "Hierbabuena"
+    ];
 
 
-    if(category==="Food"){
-
-        products=[
-            "Sandwich",
-            "Quesadilla"
-        ];
-
-    }
+    if(category==="Food")
+    products=[
+        "Sandwich",
+        "Quesadilla"
+    ];
 
 
-    if(category==="Snack"){
-
-        products=[
-            "Nueces",
-            "Chispas de chocolate"
-        ];
-
-    }
+    if(category==="Snack")
+    products=[
+        "Nueces",
+        "Chispas de chocolate"
+    ];
 
 
-    if(category==="Drink"){
-
-        products=[
-            "Agua de limón",
-            "Agua simple"
-        ];
-
-    }
+    if(category==="Drink")
+    products=[
+        "Agua de limón",
+        "Agua simple"
+    ];
 
 
 
@@ -125,7 +106,7 @@ function openCategory(category){
 
         <br><br>
 
-        ➕ Add to cart 🛒
+        ➕ Add to cart
 
         </button>
 
@@ -135,8 +116,8 @@ function openCategory(category){
     });
 
 
-
 }
+
 
 
 
@@ -144,15 +125,15 @@ function openCategory(category){
 function addToCart(product){
 
 
-    let found = cart.find(item => item.name === product);
+    let item=cart.find(x=>x.name===product);
 
 
 
-    if(found){
+    if(item){
 
-        found.quantity++;
+        item.quantity++;
 
-    } else {
+    }else{
 
         cart.push({
 
@@ -164,7 +145,7 @@ function addToCart(product){
     }
 
 
-    alert(product + " added 🛒");
+    alert(product+" added 🛒");
 
 
 }
@@ -193,14 +174,39 @@ function showCart(){
 
 
 
-    cart.forEach(function(item){
+    cart.forEach(function(item,index){
 
 
         list.innerHTML += `
 
         <div class="cartItem">
 
-        ${item.name} x${item.quantity}
+        ${item.name}
+
+        <br>
+
+        <button class="smallButton"
+        onclick="changeQuantity(${index},-1)">
+        -
+        </button>
+
+
+        ${item.quantity}
+
+
+        <button class="smallButton"
+        onclick="changeQuantity(${index},1)">
+        +
+        </button>
+
+
+        <br>
+
+
+        <button onclick="removeItem(${index})">
+        Remove ❌
+        </button>
+
 
         </div>
 
@@ -215,7 +221,63 @@ function showCart(){
 
 
     document.getElementById("totalItems").innerHTML =
-    "Total items: " + total;
+    "Total items: "+total;
+
+
+}
+
+
+
+
+function changeQuantity(index,amount){
+
+
+    cart[index].quantity += amount;
+
+
+    if(cart[index].quantity<=0){
+
+        cart.splice(index,1);
+
+    }
+
+
+    showCart();
+
+
+}
+
+
+
+
+function removeItem(index){
+
+
+    cart.splice(index,1);
+
+
+    showCart();
+
+
+}
+
+
+
+
+
+function sendOrder(){
+
+
+    if(cart.length===0){
+
+        alert("Your cart is empty ☕");
+
+        return;
+
+    }
+
+
+    alert("Order sent 🚀");
 
 
 }
@@ -232,6 +294,5 @@ function backToCategories(){
 
 
     document.getElementById("categoryScreen").style.display="block";
-
 
 }
